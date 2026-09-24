@@ -2,44 +2,63 @@ name: Update GitHub Stats
 
 on:
   schedule:
+    # Every day at 03:00 UTC = 10:00 Vietnam time
     - cron: "0 3 * * *"
 
+  # Allow manual execution
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build:
+  update-stats:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Get the latest version of the profile repository
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      # 2. Make sure we are working with the latest main branch
+      - name: Pull latest changes
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
+
+      # 3. Generate GitHub Stats
       - name: Generate GitHub Stats
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&theme=tokyonight&hide_border=true
+          options: username=hglinh-dev-2910&show_icons=true&theme=tokyonight&hide_border=true
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      # 4. Generate Top Languages
       - name: Generate Top Languages
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&theme=tokyonight&hide_border=true
+          options: username=hglinh-dev-2910&layout=compact&langs_count=8&theme=tokyonight&hide_border=true
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit generated cards
+      # 5. Commit only when generated files changed
+      - name: Commit updated stats
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add profile/*.svg
+          git add profile/stats.svg profile/top-langs.svg
 
-          git commit -m "chore: update GitHub stats" || exit 0
+          if git diff --cached --quiet; then
+            echo "No stats changes detected."
+            exit 0
+          fi
 
-          git push
+          git commit -m "chore: update GitHub stats"
+          git push origin main
