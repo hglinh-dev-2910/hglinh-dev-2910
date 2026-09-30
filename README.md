@@ -1,3 +1,11 @@
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="profile/mascot-smile.png">
+    <source media="(prefers-color-scheme: light)" srcset="profile/mascot-smile.png">
+    <img alt="Fox Mascot" src="profile/mascot-smile.png" style="max-width: 100%; height: auto; width: 120px;">
+  </picture>
+</div>
+
 # Hi 👋, I'm Ha Gia Linh
 I'm a **Full Stack Developer** who enjoys building modern web applications, scalable APIs, and practical software solutions.
 

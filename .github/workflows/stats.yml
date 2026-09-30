@@ -2,10 +2,7 @@ name: Update GitHub Stats
 
 on:
   schedule:
-    # Every day at 03:00 UTC = 10:00 Vietnam time
     - cron: "0 3 * * *"
-
-  # Allow manual execution
   workflow_dispatch:
 
 permissions:
@@ -16,44 +13,50 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Get the latest version of the profile repository
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      # --- LIGHT THEME IMAGES ---
+      - name: Generate Stats (Light)
+        uses: stats-organization/github-readme-stats-action@v2
         with:
-          fetch-depth: 0
+          card: stats
+          options: username=hglinh-dev-2910&show_icons=true&theme=default&hide_border=true&count_private=true
+          path: profile/stats-light.svg
+          token: ${{ secrets.GH_STATS }}
 
-      # 2. Make sure we are working with the latest main branch
-      - name: Pull latest changes
-        run: |
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
+      - name: Generate Top Languages (Light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=hglinh-dev-2910&layout=compact&langs_count=8&theme=default&hide_border=true&count_private=true
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GH_STATS }}
 
-      # 3. Generate GitHub Stats
-      - name: Generate GitHub Stats
+      # --- DARK THEME IMAGES ---
+      - name: Generate Stats (Dark)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=hglinh-dev-2910&show_icons=true&theme=tokyonight&hide_border=true&count_private=true
-          path: profile/stats.svg
+          path: profile/stats-dark.svg
           token: ${{ secrets.GH_STATS }}
 
-      # 4. Generate Top Languages
-      - name: Generate Top Languages
+      - name: Generate Top Languages (Dark)
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=hglinh-dev-2910&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&count_private=true
-          path: profile/top-langs.svg
+          path: profile/top-langs-dark.svg
           token: ${{ secrets.GH_STATS }}
 
-      # 5. Commit only when generated files changed
+      # --- COMMIT EVERYTHING ---
       - name: Commit updated stats
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add profile/stats.svg profile/top-langs.svg
+          git add profile/*.svg
 
           if git diff --cached --quiet; then
             echo "No stats changes detected."
