@@ -23,8 +23,94 @@ I mainly work with **React, Next.js, TypeScript, Java, Spring Boot, Node.js, and
 ## 🛠️ Languages & Tools
 
 <p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=ts,react,nextjs,java,spring,nodejs,express,postgres,mysql,mongodb,sqlite,postman,docker,git,github" />
+  <strong>🎨 Frontend</strong>
+</p>
+
+<p align="left">
+  <a href="https://www.typescriptlang.org/" title="TypeScript">
+    <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://react.dev/" title="React">
+    <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://nextjs.org/" title="Next.js">
+    <img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="Next.js" />
+  </a>
+</p>
+
+<p align="left">
+  <strong>⚙️ Backend</strong>
+</p>
+
+<p align="left">
+  <a href="https://www.java.com/" title="Java">
+    <img src="https://skillicons.dev/icons?i=java" width="48" height="48" alt="Java" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://spring.io/projects/spring-boot" title="Spring Boot">
+    <img src="https://skillicons.dev/icons?i=spring" width="48" height="48" alt="Spring Boot" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://nodejs.org/" title="Node.js">
+    <img src="https://skillicons.dev/icons?i=nodejs" width="48" height="48" alt="Node.js" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://expressjs.com/" title="Express.js">
+    <img src="https://skillicons.dev/icons?i=express" width="48" height="48" alt="Express.js" />
+  </a>
+</p>
+
+<p align="left">
+  <strong>📱 Mobile</strong>
+</p>
+
+<p align="left">
+  <a href="https://reactnative.dev/" title="React Native">
+    <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React Native" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://kotlinlang.org/" title="Kotlin">
+    <img src="https://skillicons.dev/icons?i=kotlin" width="48" height="48" alt="Kotlin" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://developer.android.com/jetpack/compose" title="Jetpack Compose">
+    <img src="https://skillicons.dev/icons?i=androidstudio" width="48" height="48" alt="Jetpack Compose" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://flutter.dev/" title="Flutter">
+    <img src="https://skillicons.dev/icons?i=flutter" width="48" height="48" alt="Flutter" />
+  </a>
+</p>
+
+<p align="left">
+  <strong>🗄️ Database</strong>
+</p>
+
+<p align="left">
+  <a href="https://www.postgresql.org/" title="PostgreSQL">
+    <img src="https://skillicons.dev/icons?i=postgres" width="48" height="48" alt="PostgreSQL" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://www.mysql.com/" title="MySQL">
+    <img src="https://skillicons.dev/icons?i=mysql" width="48" height="48" alt="MySQL" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://www.mongodb.com/" title="MongoDB">
+    <img src="https://skillicons.dev/icons?i=mongodb" width="48" height="48" alt="MongoDB" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://www.sqlite.org/" title="SQLite">
+    <img src="https://skillicons.dev/icons?i=sqlite" width="48" height="48" alt="SQLite" />
+  </a>
+</p>
+
+<p align="left">
+  <strong>🧰 Tools & DevOps</strong>
+</p>
+
+<p align="left">
+  <a href="https://www.postman.com/" title="Postman">
+    <img src="https://skillicons.dev/icons?i=postman" width="48" height="48" alt="Postman" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://www.docker.com/" title="Docker">
+    <img src="https://skillicons.dev/icons?i=docker" width="48" height="48" alt="Docker" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://git-scm.com/" title="Git">
+    <img src="https://skillicons.dev/icons?i=git" width="48" height="48" alt="Git" />
+  </a>&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/" title="GitHub">
+    <img src="https://skillicons.dev/icons?i=github" width="48" height="48" alt="GitHub" />
   </a>
 </p>
 
