@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="profile/mascot-smile.png">
     <source media="(prefers-color-scheme: light)" srcset="profile/mascot-smile.png">
-    <img alt="Fox Mascot" src="profile/mascot-smile.png" style="max-width: 100%; height: auto; width: 120px;">
+    <img alt="Fox Mascot" src="profile/mascot-smile-no-bg.png" style="max-width: 100%; height: auto; width: 120px;">
   </picture>
 </div>
 
