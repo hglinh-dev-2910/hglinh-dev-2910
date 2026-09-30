@@ -34,18 +34,18 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=hglinh-dev-2910&show_icons=true&theme=tokyonight&hide_border=true
+          options: username=hglinh-dev-2910&show_icons=true&theme=tokyonight&hide_border=true&count_private=true
           path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_STATS }}
 
       # 4. Generate Top Languages
       - name: Generate Top Languages
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: username=hglinh-dev-2910&layout=compact&langs_count=8&theme=tokyonight&hide_border=true
+          options: username=hglinh-dev-2910&layout=compact&langs_count=8&theme=tokyonight&hide_border=true&count_private=true
           path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_STATS }}
 
       # 5. Commit only when generated files changed
       - name: Commit updated stats
